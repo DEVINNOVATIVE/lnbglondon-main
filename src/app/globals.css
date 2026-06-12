@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #16181d;
+  color: white;
+}
+
+#tsparticles {
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6,
+span,
+p,
+img {
+  user-select: none;
+}
+
+/* Loader */
+.circle {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.letter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-family: "Neue Machina Bold", sans-serif;
+  color: #ffba00;
+}
+/* Loader END */
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ticker-container:hover > * {
+  animation-play-state: paused;
+}
+
+.ticker-text {
+  white-space: nowrap;
+  animation: ticker 40s linear infinite; /* Adjust the duration as needed */
+  white-space: nowrap;
+}
+
+.ticker-text2 {
+  white-space: nowrap;
+  animation: ticker2 40s linear infinite; /* Adjust the duration as needed */
+  position: absolute;
+  white-space: nowrap;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes ticker2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.moving-div {
+  position: absolute; /* Absolute positioning to move divs */
+  animation: move 10s linear infinite; /* Infinite linear animation */
+}
+
+@keyframes move {
+  0% {
+    left: 100%; /* Start off-screen on the right */
+  }
+  100% {
+    left: -50px; /* End off-screen on the left */
+  }
+}
+
+/* Additional styling for spacing the divs */
+.moving-div:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.moving-div:nth-child(3) {
+  animation-delay: 2s;
+}
+.moving-div:nth-child(4) {
+  animation-delay: 3s;
+}
+.moving-div:nth-child(5) {
+  animation-delay: 4s;
+}
+.moving-div:nth-child(6) {
+  animation-delay: 5s;
+}
+.moving-div:nth-child(7) {
+  animation-delay: 6s;
+}
+.moving-div:nth-child(8) {
+  animation-delay: 7s;
+}
+.moving-div:nth-child(9) {
+  animation-delay: 8s;
+}
+.moving-div:nth-child(10) {
+  animation-delay: 9s;
+}
+.moving-div:nth-child(11) {
+  animation-delay: 10s;
+}
+.moving-div:nth-child(12) {
+  animation-delay: 11s;
+}
+
+.why-invest-box {
+  background: url(/static/coin.png), url(/static/bg.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size:
+    300px 250px,
+    100% 100%;
+  background-position:
+    90% 100%,
+    50% 50%;
+}
+
+/* FOOOTER */
+
+.footer-inner {
+  box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.58);
+
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='%23fcc900' stop-opacity='.25' offset='0%25'/%3e%3cstop stop-color='%23fcc900' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='url(%23a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e"),
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='%23fcc900' stop-opacity='.25' offset='0%25'/%3e%3cstop stop-color='%23fcc900' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='url(%23a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e"),
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='%23fcc900' stop-opacity='.25' offset='0%25'/%3e%3cstop stop-color='%23fcc900' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='url(%23a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e");
+  background-repeat: repeat-x;
+  background-size: 1600px 50%;
+  background-position:
+    0 130%,
+    -50px 130%,
+    500px 130%;
+
+  animation: 20s waves linear infinite forwards;
+}
+@keyframes waves {
+  to {
+    background-position:
+      1600px 130%,
+      3150px 130%,
+      5300px 130%;
+  }
+}
